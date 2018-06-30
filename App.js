@@ -1,21 +1,24 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Container } from "./style";
+import Search from "./components/search";
+import Add from "./components/add/";
+import Board from "./components/board";
+import { Provider } from "react-redux";
+import reducer from "./components/reducer";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Hello Serafim !</Text>
-      </View>
-    );
-  }
-}
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+export default () => {
+  return (
+    <Provider store={store}>
+      <Container>
+        <Search />
+        <Board />
+        <Add />
+      </Container>
+    </Provider>
+  );
+};
