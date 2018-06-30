@@ -1,1 +1,1 @@
-## Simple TODO app with React Native and Redux
+## Simple todo app with React Native and Redux
