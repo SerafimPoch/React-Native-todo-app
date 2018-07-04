@@ -1,5 +1,8 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 2865,
+  "expoServerNgrokUrl": "https://ki-yig.serafimpoch.todo.exp.direct",
+  "packagerNgrokUrl": "https://packager.ki-yig.serafimpoch.todo.exp.direct",
+  "ngrokPid": 2881
 }
